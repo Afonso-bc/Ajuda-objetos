@@ -1,21 +1,13 @@
-#include<stdio.h>
-#include<stdlib.h>
-main()
+#include <stdio.h>
+#include <stdlib.h>
+main( )
 {
-int k;
-float l;
-char m;
-
-printf("insira um numero inteiro:");
-scanf("%d",&k);
-printf("insira um numero real:");
-scanf("&f",&l);
-printf("Digite um carater:");
-scanf(" %c",&m);
-
-printf("\n========\n");
-printf("\t\tDados inseridos foram:\n");
-printf("O numero inteiro: %d \n O numero real: %2f \n O carater:%c",k,l,m);
-system
-("pause");
-}
+int x;
+int *p;  //p é um ponteiro apontado
+p=&x;
+x=18;
+printf("O valar de p:%p",p);
+printf("x e' igual %d", *p);
+printf("O endereço de x : %p\n",&x);
+          system("pause");
+          }
