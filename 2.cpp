@@ -1,30 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
-void Identificacao()
+int main()
 {
-     
-     }
-     void AreaRetang()
-     {
-          
-          }
-          
-          main()
-          { 
-          system("cls");
-          printf("\n MENU\n");
-          printf("\n 1-Identificacao do programador\n");
-          printf("\n 2-Area de um retangulo\n");
-          printf("\n 3-Digitos decimais\n");
-          printf("\n 4-Primeiros 20 multiplos de 4\n");
-          printf("\n 0-Saida do programa \n");
-          printf("Qual e' a sua escolha?");
-          scanf("%d",&escolha);
-          switch(escolha)
-          {
-                         case 1:
-                              Identificacao();
-                              break;
-                              case 2: AreaRetang();
-                              case 3:
-                                    
+	int vet[20],i,soma,maior,menor;
+	for (i = 1; i <= 5; i++)
+	{
+		printf("\nEscreva um numero: ");
+		scanf ("%i", &vet[i]);
+	}
+
+	//fazer a soma
+	soma = 0;
+	for (i = 1; i <= 5; i++)
+	{
+		soma = soma + vet[i];
+	}
+    printf("\nA soma dos numeros e': %d",soma);
+
+	//encontrar o maior
+	maior = 0;
+	for (i = 1; i <= 5; i++)
+	{
+		if (vet[i] > maior)
+			maior = vet[i];
+	}
+	printf("\nO maior e': %d", maior);
+
+	//encontrar o menor
+	menor = 9999999;
+	for (i = 1; i <= 5; i++)
+	{
+		if (vet[i] < menor)
+			menor = vet[i];
+	}
+	printf("\nO menor e': %d", menor);
+
+}
